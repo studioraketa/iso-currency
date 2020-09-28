@@ -1,0 +1,33 @@
+{
+  "name": "@studioraketa/iso-currency",
+  "version": "0.0.2",
+  "description": "",
+  "private": false,
+  "main": "dist/index.js",
+  "umd:main": "dist/index.umd.js",
+  "module": "dist/index.mjs",
+  "source": "src/index.js",
+  "scripts": {
+    "build": "yarn run test && microbundle-crl --no-compress --format modern,cjs",
+    "dev": "microbundle-crl watch --no-compress --format modern,cjs",
+    "prepare": "yarn run build",
+    "test": "yarn run test:lint",
+    "test:lint": "eslint .",
+    "currencies:update": "ruby ./data/update_currencies.rb && eslint . --fix"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.10.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "microbundle-crl": "^0.13.11",
+    "prettier": "^2.1.2"
+  }
+}
