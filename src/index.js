@@ -33,7 +33,7 @@ const toMinor = (amount, currencyCode) => {
     throw new Error(`A currency with code "${currencyCode}" not found.`);
   }
 
-  return Math.ceil(amount * Math.pow(10, currency.exp));
+  return Math.round(amount * Math.pow(10, currency.exp));
 };
 
 export default {
