@@ -16,7 +16,7 @@ const currencyName = (currencyCode) => {
   return currency.name;
 };
 
-const toDecimal = (amount, currencyCode) => {
+const toMajor = (amount, currencyCode) => {
   const currency = CURRENCIES.find((cur) => cur.code === currencyCode);
 
   if (!currency) {
@@ -40,5 +40,5 @@ export default {
   all,
   currencyName,
   toMinor,
-  toDecimal,
+  toMajor,
 };
